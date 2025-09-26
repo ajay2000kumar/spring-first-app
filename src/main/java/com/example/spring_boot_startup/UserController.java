@@ -17,17 +17,9 @@ import java.util.Optional;
 public class UserController {
     @Autowired
     private UserRepository userRepository;
-//    @GetMapping
-//    public String getUsers() {
-//        return "Hello Users";
-//    }
 
     @GetMapping
     public List<UserEntity> getUsers(){
-//        return Arrays.asList(
-//                new Users(1L,"Ajay","ajay@gmail.com"),
-//                new Users(2L,"Raja","raja@gmail.com")
-//                );
        return   userRepository.findAll();
     }
 
